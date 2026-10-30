@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+saida/
+.env
+# PDFs de edições impressas não vão para o repositório público
+*.pdf
+# áudio gerado (regenerável)
+livros/*/audio/

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pytest*)",
+      "Bash(python -m pytest*)",
+      "Bash(interlinear *)",
+      "Bash(pip install*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add*)",
+      "Read(//mnt/c/Users/conta/Documents/dev/tefila-dev/**)"
+    ],
+    "deny": [
+      "Edit(//mnt/c/Users/conta/Documents/dev/tefila-dev/**)",
+      "Bash(*tefila-dev*)",
+      "Read(./.env)"
+    ]
+  }
+}
