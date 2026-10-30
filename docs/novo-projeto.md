@@ -260,4 +260,4 @@ interlinear/
   é um espelho dos docs, atualizado pelo Claude Code no fim de cada sessão.
 - **2026-10-30** — Princípio 7: script onde dá, IA onde é difícil, humano aprova. Itens de camada têm `status`.
 - **2026-10-30** — A primeira saída é `saida/<livro>.zip` para arrastar no Netlify; deploy automático só na Fase 7.
-- **2026-10-30** — Python 3.12 instalado em ~/.local/bin (via uv); o 3.14 do sistema não tem venv sem python3-venv. Se a .venv quebrar, recriar com: python3.12 -m venv .venv && pip install -e '.[dev]'
+- **2026-10-30** — Python 3.12 instalado em ~/.local/bin (via uv); o 3.14 do sistema não tem venv sem python3-venv. Se a .venv quebrar, recriar com: python3.12 -m venv --clear .venv && source .venv/bin/activate && pip install -e '.[dev]'

@@ -3,6 +3,24 @@
 Uma entrada por sessão de trabalho no Claude Code, no formato do "relatório de passagem" (ver `COMO-TRABALHAMOS.md`).
 A entrada mais recente fica no topo.
 
+## 2026-10-30 — Comando de recuperação da venv corrigido e regra 5
+**Fase:** 0 — Esqueleto
+**O que foi feito:** a §12 do `novo-projeto.md` e o `CLAUDE.md` agora têm só a forma com `--clear` do comando de
+recuperação, sem o aviso. O `CLAUDE.md` ganhou a regra 5 em "Com quem você trabalha", com o texto ditado pelo Moises.
+**Arquivos principais:** `CLAUDE.md` — seção "Comandos" e regra 5; `docs/novo-projeto.md` — §12.
+**Conceitos novos que apareceram:** nenhum.
+**Decisões tomadas:**
+- Resolve a pendência da entrada anterior: fica só a forma com `--clear`, decisão do Moises, registrada na §12.
+- Regra 5: texto ditado tecnicamente errado é testado, corrigido e relatado aqui; decisão de arquitetura continua exigindo
+  pergunta. Registrada no `CLAUDE.md`.
+- Diferença em relação ao texto ditado: a §12 trocou `python3.12 -m venv .venv && pip install -e '.[dev]'` por
+  `python3.12 -m venv --clear .venv && source .venv/bin/activate && pip install -e '.[dev]'`. A entrada anterior ficou
+  como estava, como histórico.
+**Dúvidas / pontos para o mentor:** nenhuma nova.
+**Testes:** `pytest` — `1 passed`. Comando de recuperação copiado do `CLAUDE.md` e rodado em cópia descartável do projeto:
+funcionou sem `.venv` e com `.venv` quebrada (`interlinear --version` e `pytest` ok).
+**Próximo passo sugerido:** começar a Fase 1. Para o teste A, o Moises precisa rodar o `rsync` que está no `CLAUDE.md`.
+
 ## 2026-10-30 — Fase 0: esqueleto do projeto, CLI e primeiro teste
 **Fase:** 0 — Esqueleto
 **O que foi feito:** criamos o `pyproject.toml` e o pacote em `src/interlinear/`, com Python >= 3.12 e as dependências

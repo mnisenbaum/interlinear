@@ -19,6 +19,8 @@ Leia-o antes de qualquer tarefa nova.
      `cp CLAUDE.md docs/*.md /mnt/c/Users/conta/Documents/dev/interlinear/`
   4. Se uma decisão de arquitetura não estiver em `docs/novo-projeto.md`, **pergunte** em vez de decidir sozinho,
      e depois registre a decisão no documento.
+  5. Se um texto ditado pelo mentor ou pelo Moises estiver tecnicamente errado, teste a versão correta, aplique-a e
+     registre a diferença no relatório. Decisões de arquitetura continuam exigindo pergunta (item 4).
 
 ## Regras do projeto
 - **Nada amarrado a um livro.** Nenhum nome de livro, título de capítulo ou língua fixa no código; isso tudo fica em `livros/<id>/livro.yaml`.
@@ -46,11 +48,6 @@ interlinear --help
 interlinear --version
 ```
 Se a `.venv` quebrar, recriar com:
-```bash
-python3.12 -m venv .venv && pip install -e '.[dev]'
-```
-**Aviso (testado em 2026-10-30):** o comando acima falha com `pip: command not found` se a `.venv` não estiver ativada,
-e o `venv` dá erro se a `.venv` estiver quebrada. Esta forma funcionou nos dois casos (sem `.venv` e com `.venv` quebrada):
 ```bash
 python3.12 -m venv --clear .venv && source .venv/bin/activate && pip install -e '.[dev]'
 ```
