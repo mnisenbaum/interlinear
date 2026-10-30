@@ -39,9 +39,18 @@ rsync -a --exclude='*.pdf' /mnt/c/Users/conta/Documents/dev/tefila-dev/projeto/ 
 ```
 
 ## Comandos
-(serão preenchidos na Fase 0)
 ```bash
-source .venv/bin/activate
-pytest
+source .venv/bin/activate   # ativa a venv do projeto (uma vez por terminal)
+pytest                      # roda os testes
 interlinear --help
+interlinear --version
+```
+Se a `.venv` quebrar, recriar com:
+```bash
+python3.12 -m venv .venv && pip install -e '.[dev]'
+```
+**Aviso (testado em 2026-10-30):** o comando acima falha com `pip: command not found` se a `.venv` não estiver ativada,
+e o `venv` dá erro se a `.venv` estiver quebrada. Esta forma funcionou nos dois casos (sem `.venv` e com `.venv` quebrada):
+```bash
+python3.12 -m venv --clear .venv && source .venv/bin/activate && pip install -e '.[dev]'
 ```
