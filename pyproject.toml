@@ -18,5 +18,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest"]
 
+[project.scripts]
+interlinear = "interlinear.cli:app"
+
 [tool.pytest.ini_options]
 testpaths = ["testes"]
